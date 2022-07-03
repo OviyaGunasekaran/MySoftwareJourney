@@ -13,7 +13,7 @@ public class FibonacciScannerUsage {
 	 int count = sc.nextInt();
 	 System.out.print("First "+count+" numbers of Fibonacci Series:\n");   
 	
-	if (count == 1)
+	if (count <= 1)
 		System.out.print(n1); 
 	else
 		
