@@ -1,0 +1,13 @@
+h1{
+	color:grey;
+}
+
+dt {
+  background-color: grey;
+  color: white;
+  padding: 10px;
+  position: sticky;
+  top: 10px;
+  left: 0;
+  margin: 1em 0;
+}
