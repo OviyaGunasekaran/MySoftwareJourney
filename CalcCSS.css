@@ -1,0 +1,35 @@
+h3{
+  color:white;
+  background-color: grey;
+}
+input
+{
+	width: 50px; 
+	background-color: #f1f1f1;
+	color: black; 
+	border: 1px solid grey; 
+	border-radius: 8px; 
+	padding: 20px; 
+	margin: 5px; 
+	
+}
+#calc
+	{
+	width: 210px; 
+	background-color: #f1f1f1;
+	color: black; 
+	border: 1px solid grey; 
+	border-radius: 8px; 
+	padding: 20px; 
+	margin: 5px; 
+	}
+#clear
+	{
+	width: 240px; 
+	background-color: #f1f1f1;
+	color: black; 
+	border: 1px solid grey; 
+	border-radius: 8px; 
+	padding: 20px; 
+	margin: 5px; 
+	}
