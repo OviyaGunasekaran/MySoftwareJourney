@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<canvas id="gameCanvas" width="900" height="600"> </canvas>
+<script>
+var canvas;
+var canvasContext;
+
+window.onload = function(){
+	canvas = document.getElementById('gameCanvas');
+	canvasContext=canvas.getContext('2d');
+	canvasContext.fillStyle = 'black';
+	canvasContext.fillRect(0,0,canvas.width,canvas.height);
+//eyes		
+	canvasContext.fillStyle = 'white';
+	canvasContext.fillRect(100,100,150,100);
+	canvasContext.fillStyle = 'white';
+	canvasContext.fillRect(650,100,150,100);
+//nose	
+	canvasContext.fillStyle = 'grey';
+	canvasContext.fillRect(410,360,80,-80);
+//teeth		
+	canvasContext.fillStyle = 'white';
+	canvasContext.fillRect(800,500,-100,100);
+	canvasContext.fillStyle = 'white';
+	canvasContext.fillRect(600,500,-100,100);
+	canvasContext.fillStyle = 'white';
+	canvasContext.fillRect(400,500,-100,100);
+	canvasContext.fillStyle = 'white';
+	canvasContext.fillRect(200,500,-100,100);
+}
+</script>
+</html>
