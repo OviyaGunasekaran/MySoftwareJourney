@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<canvas id="gameCanvas" width="800" height="600"> </canvas>
+<script>
+var canvas;
+var canvasContext;
+var posX1=10;
+var posY1=500;
+var posX2=70;
+var posY2=400;
+var posX3=150;
+var posY3=300;
+window.onload = function(){
+	canvas = document.getElementById('gameCanvas');
+	canvasContext=canvas.getContext('2d');
+	setInterval(drawAll, 200);
+}
+function drawAll(){
+	posX1 = posX1 + 20;
+	posY1 = posY1 - 20;
+	posX2 = posX2 + 20;
+	posY2 = posY2 - 20;
+	posX3 = posX3 + 20;
+	posY3 = posY3 - 20;
+	
+	console.log(posX1);
+	console.log(posY1);
+	canvasContext.fillStyle = 'black';
+	canvasContext.fillRect(0,0,canvas.width,canvas.height);
+	
+	canvasContext.fillStyle = 'lightblue';
+	
+	canvasContext.fillRect(posX1,posX1,posX1,posX1);
+	canvasContext.fillRect(posY1,posY1,posY1,posY1);
+	canvasContext.fillRect(posX2,posX2,posX2,posX2);
+	canvasContext.fillRect(posY2,posY2,posY2,posY2);
+	canvasContext.fillRect(posX3,posX3,posX3,posX3);
+	canvasContext.fillRect(posY3,posY3,posY3,posY3);
+}
+</script>
+</html>
