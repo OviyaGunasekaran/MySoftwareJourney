@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<canvas id="gameCanvas" width="800" height="600"> </canvas>
+
+<script>
+var canvas;
+var canvasContext;
+var posXmin=0;
+var posXmax=575;
+var posYmax=0;
+var posYmin=775;
+
+window.onload = function(){
+	canvas = document.getElementById('gameCanvas');
+	canvasContext=canvas.getContext('2d');
+
+	setInterval(drawAll, 100);
+}
+
+function drawAll(){
+
+	posXmin = posXmin + 20;
+	posXmax = posXmax - 20;
+	posYmax = posYmax + 20;
+	posYmin = posYmin - 20;
+	
+	console.log(posXmin);
+	console.log(posXmax);
+	console.log(posYmax);
+	console.log(posYmin);
+	canvasContext.fillStyle = 'black';
+	canvasContext.fillRect(0,0,canvas.width,canvas.height);
+	
+	canvasContext.fillStyle = 'yellow';
+	canvasContext.fillRect(posXmin,0,50,25);
+	canvasContext.fillRect(0,posXmax,25,50);
+	canvasContext.fillRect(775,posYmax,25,50);
+	canvasContext.fillRect(posYmin,575,50,25);
+	
+}
+
+</script>
+</html>
