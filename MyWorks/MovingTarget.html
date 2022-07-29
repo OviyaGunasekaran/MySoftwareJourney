@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<canvas id="gameCanvas" width="800" height="600"> </canvas>
+
+<script>
+var canvas;
+var canvasContext;
+var posX = 50; 
+var posSpeedX = 10;
+window.onload = function(){
+	canvas = document.getElementById('gameCanvas');
+	canvasContext=canvas.getContext('2d');
+	
+	var framesPerSecond = 25;
+	setInterval(function() {
+		moveAll(); 
+		drawAll();
+	}, 1000/framesPerSecond );
+}
+
+function moveAll(){
+	posX = posX + posSpeedX;
+	if(posX < 0){
+		posSpeedX = -posSpeedX; 
+	}
+	if(posX > canvas.width){
+		posSpeedX = -posSpeedX; 
+	}
+}
+function drawAll(){
+	//canvas	
+	colorRect(0,0,canvas.width,canvas.height,'black');
+	//play ball
+	canvasContext.fillStyle = 'white';
+	canvasContext.beginPath();
+	canvasContext.arc(posX, 100, 100, 0,Math.PI*2, true);
+	canvasContext.fill();
+	
+	canvasContext.fillStyle = 'saddlebrown';
+	canvasContext.beginPath();
+	canvasContext.arc(posX, 100, 80, 0,Math.PI*2, true);
+	canvasContext.fill();
+	
+	canvasContext.fillStyle = 'yellow';
+	canvasContext.beginPath();
+	canvasContext.arc(posX, 100, 55, 0,Math.PI*2, true);
+	canvasContext.fill();
+	
+	canvasContext.fillStyle = 'skyblue';
+	canvasContext.beginPath();
+	canvasContext.arc(posX, 100, 35, 0,Math.PI*2, true);
+	canvasContext.fill();
+	
+	canvasContext.fillStyle = 'red';
+	canvasContext.beginPath();
+	canvasContext.arc(posX, 100, 10, 0,Math.PI*2, true);
+	canvasContext.fill();
+	
+}
+
+function colorRect(leftX,topY,width,height,drawColor){
+	canvasContext.fillStyle = drawColor;
+	canvasContext.fillRect(leftX,topY,width,height);
+	
+}
+
+</script>
+
+</html>
